@@ -99,12 +99,6 @@ def register_handlers(bot):
         amount=amount
         )   
 
-
-
-        # month_settings_storage[user_id][month_key]["penalties"].append({
-        #     "reason": reason,
-        #     "amount": amount
-        # })
     
         bot.delete_message(message.chat.id, message.message_id)
         bot.delete_message(message.chat.id, user_state[user_id]["question_msg_id"])
