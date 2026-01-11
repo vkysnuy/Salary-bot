@@ -9,7 +9,7 @@ load_dotenv()
 BOT_TOKEN = os.getenv("TOKEN")
 WEBHOOK_URL = os.getenv("WEBHOOK_URL")
 
-bot = telebot.TeleBot(os.getenv(BOT_TOKEN))
+bot = telebot.TeleBot(BOT_TOKEN)
 app = Flask(__name__)
 
 
