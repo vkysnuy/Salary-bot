@@ -6,7 +6,7 @@ from flask import Flask, request
 
 load_dotenv()
 
-BOT_TOKEN = os.getenv("TOKEN")
+BOT_TOKEN = os.getenv("TOKEN_BOT")
 WEBHOOK_URL = os.getenv("WEBHOOK_URL")
 
 bot = telebot.TeleBot(BOT_TOKEN)
