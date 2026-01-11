@@ -2,13 +2,13 @@ import gspread
 from google.oauth2.service_account import Credentials
 import os
 from dotenv import load_dotenv
+import json
 
 load_dotenv()
 
 
-#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SERVICE_ACCOUNT_FILE = os.getenv("GOOGLE_CREDENTIALS_PATH")
+SERVICE_ACCOUNT_FILE = json.loads(os.getenv("GOOGLE_CREDENTIALS_PATH"))
 
 if not SERVICE_ACCOUNT_FILE:
     raise RuntimeError("❌ GOOGLE_CREDENTIALS_PATH не задан в .env")
