@@ -7,8 +7,8 @@ import json
 load_dotenv()
 
 
-
 SERVICE_ACCOUNT_FILE = json.loads(os.getenv("GOOGLE_CREDENTIALS_PATH"))
+
 
 if not SERVICE_ACCOUNT_FILE:
     raise RuntimeError("❌ GOOGLE_CREDENTIALS_PATH не задан в .env")
